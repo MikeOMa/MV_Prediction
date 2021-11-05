@@ -1,6 +1,7 @@
 # Code for reproduction of the paper Multivariate Probabilsitic Prediction using Natural Gradient Boosting.
 
-This repository is only for replication of results. An implementation allowing one to fit a multivariate gaussian distribution is in the `ngboost` package.
+This repository is only for replication of results. For practical usage [ngboost](https://github.com/stanfordmlgroup/ngboost) main package is advised. 
+The implementation allowing one to fit a multivariate gaussian distribution with ngboost is in the `ngboost` package.
 A minimal example (ngboost version 0.3.10) would be
 ```
 import ngboost
@@ -18,8 +19,7 @@ model.fit(X,Y)
 model.pred_dist(X).scipy_distribution()
 ```
 
-**TODO** arxiv link to paper here.
-
+Link to Paper : https://arxiv.org/abs/2106.03823
 
 Note that the implementation of multivariate Gaussian NGBoost is not provided here, that is provided in the package ngboost and can be installed via
 ```shell
@@ -75,7 +75,8 @@ Due to dataset size the North Atlantic Ocean (NAO) dataset is supplied on zenado
 export data_file=PATH_TO_NAO_DATASET
 ```
 
-**TODO** Link to Zenado where file is hosted.
+Link to file:
+https://zenodo.org/record/5644972
 
 To create the hyper parameter configurations files for the grid search run the following:
 ```shell
@@ -106,7 +107,7 @@ done
 ```
 This script will create and fill `experiments/metrics` which are summarised using `notebooks/SummariseResults` to create the tables in the paper.
 
-## Software versions for replication
+### Software versions for replication
 
 The versions of the packages used to run the experiments in the paper are supplied to allow replication of results.
 The versions of each package which were in the environment used to generate data and fit models are given in `replication.txt`, the python version used was 3.8.3.
@@ -120,4 +121,11 @@ scikit-learn==0.23.2 ## Used for tree base learners and vanilla gradient boostin
 scipy==1.6.1 ## Used within Indep NGB and NGB
 ```
 
-These are note forced in requirements.txt or the installation of the package probdrift.
+These are not forced in requirements.txt or the installation of the package probdrift.
+
+### Table/Figure mappings
+
+- **Figure 1** notebooks/IllustrativeExample.ipynb
+- **Figure 2** notebooks/exp_plots.ipynb
+- **Figure 3** notebooks/SpatialPlot.ipynb
+- **Table 1, 2, S2, S3, Figure S1** notebooks/SummariseResults.ipynb
