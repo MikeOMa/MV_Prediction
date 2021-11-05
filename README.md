@@ -78,6 +78,11 @@ export data_file=PATH_TO_NAO_DATASET
 Link to file:
 https://zenodo.org/record/5644972
 
+Created with pandas, recommended command to load:
+```
+data = pandas.read_hdf("path to zenado file")
+```
+
 To create the hyper parameter configurations files for the grid search run the following:
 ```shell
 python generate_configuration.py
