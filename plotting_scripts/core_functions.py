@@ -9,8 +9,9 @@ import matplotlib.pyplot as plt
 import sys
 
 import sys
+
 sys.path.append("../experiments/")
-os.environ['data_file'] = os.environ['drift_files']
+os.environ["data_file"] = os.environ["drift_files"]
 from dispatcher import random_id_subset
 import pickle
 
@@ -39,7 +40,7 @@ def read_models(model_dir, k=5):
     return models
 
 
-data = pd.read_hdf(os.environ['drift_files'])
+data = pd.read_hdf(os.environ["drift_files"])
 ids = data["id"].values
 ## 500 is the seed used to generate the splits
 np.random.seed(500)
