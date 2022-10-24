@@ -10,7 +10,7 @@ packages = [
 ]
 setuptools.setup(
     name="probdrift",
-    version="0.1",
+    version="0.2",
     description="python code for distribution drifter prediction",
     author="Michael O'Malley",
     author_email="michael.omalley1011@gmail.com",
