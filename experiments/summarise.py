@@ -3,7 +3,6 @@ import os
 import yaml
 import pickle
 from probdrift.metrics import METRIC_LIST
-from probdrift.validation_strategy import id_splitter
 from scipy.stats import multivariate_normal
 import numpy as np
 

@@ -69,9 +69,9 @@ def fit_skGB(X, Y, valid_X, valid_Y):
     return model, end - start
 
 
-def fit_nn(X, Y, valid_X, valid_Y, ud=False, verbose=0, cp_name="", **kwargs):
+def fit_nn(X, Y, valid_X, valid_Y, verbose=0, cp_name="", **kwargs):
     """
-    Wrapper to fit ngboost with a diagonal covariance
+    Wrapper to fit neural network predicting a multivariate Gaussian
     Args:
         X: Training X data
         Y: Training Y data
@@ -83,7 +83,7 @@ def fit_nn(X, Y, valid_X, valid_Y, ud=False, verbose=0, cp_name="", **kwargs):
     Returns:
         a fitted neural network model
     """
-    model = mvn_neuralnetwork(**kwargs, ud=ud)
+    model = mvn_neuralnetwork(**kwargs)
 
     start = time.time()
     model.fit(

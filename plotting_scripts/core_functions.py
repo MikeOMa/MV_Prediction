@@ -3,7 +3,6 @@ from sklearn import preprocessing
 import os
 import pandas as pd
 import cartopy.crs as ccrs
-from probdrift.validation_strategy import id_splitter
 import numpy as np
 import matplotlib.pyplot as plt
 import sys
